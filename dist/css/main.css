@@ -1020,11 +1020,16 @@ body {
       -webkit-animation: scroll 70s linear 18s;
       animation: scroll 70s linear 18s;
       position: absolute;
-      top: 100%; }
-      .text .board .content h2, .text .board .content h3, .text .board .content p {
-        font-size: 350%;
+      top: 100%;
+      text-align: center; }
+      .text .board .content h2, .text .board .content h3 {
+        font-size: 450%;
         color: #ffff82;
-        text-align: center; }
+        margin-bottom: 50px; }
+      .text .board .content p {
+        font-size: 325%;
+        color: #ffff82;
+        font-weight: normal; }
 
 @-webkit-keyframes intro {
   0% {
