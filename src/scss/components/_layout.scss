@@ -1,0 +1,131 @@
+/* Layout
+  =============== */
+
+body {
+  font-family: Arial, Helvetica, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  margin: 0;
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+}
+
+.star {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background-color: white;
+  z-index: 0;
+}
+
+.intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: intro 6s ease-out 1s;
+  opacity: 0;
+
+  h1 {
+    font-size: 350%;
+  }
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+
+  svg {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale(2.25);
+    animation: logo 9s ease-out 9s;
+  }
+}
+
+.text {
+  height: 100vh;
+
+  .board {
+    transform: perspective(400px) rotateX(25deg);
+    transform-origin: 50% 100%; 
+    text-align: justify;
+    position: absolute;
+    font-weight: bold;
+    overflow: hidden;
+    height: 250%;
+    width: 100%;
+    bottom: 0;
+    
+    &:after {
+      position: absolute;
+      content: '';
+      bottom: 60%;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
+
+    .content {
+      animation: scroll 70s linear 18s;
+      position: absolute;
+      top: 100%;
+
+      h2, h3, p {
+        font-size: 350%;
+        color: #ffff82;
+        text-align: center;
+      }
+    }
+  }
+}
+
+// Animaciones
+
+@keyframes intro {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes logo {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.1);
+
+  }
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+    top: 100%;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: -150%;
+  }
+}
