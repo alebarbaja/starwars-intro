@@ -974,8 +974,16 @@ body {
   -webkit-animation: intro 6s ease-out 1s;
   animation: intro 6s ease-out 1s;
   opacity: 0; }
+  @media screen and (max-width: 600px) {
+    .intro {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto; } }
   .intro h1 {
     font-size: 350%; }
+    @media screen and (max-width: 600px) {
+      .intro h1 {
+        font-size: 150%; } }
 
 .logo {
   position: absolute;
@@ -994,6 +1002,10 @@ body {
     transform: scale(2.25);
     -webkit-animation: logo 9s ease-out 9s;
     animation: logo 9s ease-out 9s; }
+    @media screen and (max-width: 600px) {
+      .logo svg {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5); } }
 
 .text {
   height: 100vh; }
@@ -1026,10 +1038,16 @@ body {
         font-size: 450%;
         color: #ffff82;
         margin-bottom: 50px; }
+        @media screen and (max-width: 600px) {
+          .text .board .content h2, .text .board .content h3 {
+            font-size: 250%; } }
       .text .board .content p {
         font-size: 325%;
         color: #ffff82;
         font-weight: normal; }
+        @media screen and (max-width: 600px) {
+          .text .board .content p {
+            font-size: 150%; } }
 
 @-webkit-keyframes intro {
   0% {

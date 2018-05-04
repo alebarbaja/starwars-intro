@@ -24,9 +24,18 @@ body {
   transform: translate(-50%, -50%);
   animation: intro 6s ease-out 1s;
   opacity: 0;
+  @media screen and (max-width: 600px) {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   h1 {
     font-size: 350%;
+
+    @media screen and (max-width: 600px) {
+      font-size: 150%;
+    }
   }
 }
 
@@ -45,6 +54,10 @@ body {
     opacity: 0;
     transform: scale(2.25);
     animation: logo 9s ease-out 9s;
+
+    @media screen and (max-width: 600px) {
+      transform: scale(1.5);
+    }
   }
 }
 
@@ -81,12 +94,20 @@ body {
         font-size: 450%;
         color: #ffff82;
         margin-bottom: 50px;
+
+        @media screen and (max-width: 600px) {
+          font-size: 250%;
+        }
       }
 
       p {
         font-size: 325%;
         color: #ffff82;
         font-weight: normal;
+
+        @media screen and (max-width: 600px) {
+          font-size: 150%;
+        }
       }
     }
   }
